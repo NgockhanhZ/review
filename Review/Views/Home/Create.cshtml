@@ -1,0 +1,45 @@
+﻿@model Review.Models.Movie
+@{
+    ViewData["Title"] = "Thêm Phim Mới";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" class="mt-4">
+    <div class="form-group">
+        <label for="title">Tiêu đề</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="description">Mô tả</label>
+        <textarea class="form-control" asp-for="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="releaseDate">Ngày phát hành</label>
+        <input type="date" class="form-control" asp-for="ReleaseDate" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="genre">Thể loại</label>
+        <input type="text" class="form-control" asp-for="Genre" />
+        <span asp-validation-for="Genre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="imageURL">URL Ảnh</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <span asp-validation-for="ImageURL" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="link">Link Phim</label>
+        <input type="text" class="form-control" asp-for="Link" />
+        <span asp-validation-for="Link" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Thêm Phim</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
