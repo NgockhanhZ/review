@@ -145,3 +145,4 @@ C:\Users\trank\source\repos\Review\Review\obj\Debug\net8.0\refint\Review.dll
 C:\Users\trank\source\repos\Review\Review\obj\Debug\net8.0\Review.pdb
 C:\Users\trank\source\repos\Review\Review\obj\Debug\net8.0\Review.genruntimeconfig.cache
 C:\Users\trank\source\repos\Review\Review\obj\Debug\net8.0\ref\Review.dll
+C:\Users\trank\source\repos\Review\Review\obj\Debug\net8.0\Review.sourcelink.json

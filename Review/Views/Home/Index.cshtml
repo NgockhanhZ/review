@@ -22,7 +22,7 @@
                         <h5 class="card-title">@film.Title</h5>
                         <p><strong>Thể loại:</strong> @film.Genre</p>
                         <p><strong>Năm sản xuất:</strong> @film.ReleaseDate.Year</p>
-                        <p class="card-text description">
+                        <p class="card-text description" style="display: none;">
                             @if (!string.IsNullOrEmpty(film.Description) && film.Description.Length > 1000)
                             {
                                 @film.Description.Substring(0, 1000)
@@ -35,7 +35,7 @@
                         <button class="btn btn-info toggle-description">Ẩn/Hiện Chi Tiết</button>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="@film.Link" class="btn btn-primary" target="_blank">Xem Phim</a> <!-- Nút "Xem Phim" -->
+                        <a href="@film.Link" class="btn btn-primary" target="_blank">Xem Phim</a>
                         <a asp-action="Edit" asp-route-id="@film.Id" class="btn btn-warning">Chỉnh Sửa</a>
                         <form asp-action="Delete" method="post" asp-route-id="@film.Id" onsubmit="return confirm('Bạn có chắc chắn muốn xóa phim này?');" style="display:inline;">
                             <button type="submit" class="btn btn-danger">Xóa</button>
